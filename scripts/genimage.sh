@@ -99,7 +99,7 @@ echo "Preparing zipfile"
 if [ ! -d "android-image-flashing-template" ]; then
     apt update
     apt install git -y
-    git clone https://github.com/droidian-onclite/android-image-flashing-template
+    git clone https://github.com/sexynos/android-image-flashing-template
 fi
 echo ${WORK_DIR}
 echo ${ZIP_NAME}
@@ -113,14 +113,10 @@ mv ${WORK_DIR}/userdata.img ${WORK_DIR}/target/data/userdata.img
 
 apt update
 apt install wget -y
-wget https://github.com/droidian-onclite/kernel-xiaomi-onclite/releases/download/images/boot.img
-wget https://github.com/droidian-onclite/kernel-xiaomi-onclite/releases/download/images/dtbo.img
-wget https://github.com/droidian-onclite/kernel-xiaomi-onclite/releases/download/images/vbmeta.img
-wget https://github.com/droidian-onclite/kernel-xiaomi-onclite/releases/download/images/vendor.img
-cp ./boot.img ${WORK_DIR}/target/data/boot.img
-cp ./dtbo.img ${WORK_DIR}/target/data/dtbo.img
-cp ./vbmeta.img ${WORK_DIR}/target/data/vbmeta.img
-cp ./vendor.img ${WORK_DIR}/target/data/vendor.img
+wget https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/star2lte/boot-star2lte.img
+wget https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/star2lte/recovery.img
+cp ./boot-star2lte.img ${WORK_DIR}/target/data/boot.img
+cp ./recovery.img ${WORK_DIR}/target/data/recovery.img
 
 # generate zip
 echo "Generating zip"

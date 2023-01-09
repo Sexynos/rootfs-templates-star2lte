@@ -46,9 +46,9 @@ cleanup() {
 }
 
 apt install -y curl
-curl -sS https://mirror.bardia.tech/onclite/onclite.gpg | tee /etc/apt/trusted.gpg.d/onclite.gpg
-curl https://mirror.bardia.tech/onclite/onclite.gpg | sudo apt-key add -
-curl -sS -o /etc/apt/sources.list.d/onclite.list https://mirror.bardia.tech/onclite/onclite.list
+curl -sS https://mirror.bardia.tech/exynos9810/exynos9810.gpg | tee /etc/apt/trusted.gpg.d/exynos9810.gpg
+curl https://mirror.bardia.tech/exynos9810/exynos9810.gpg | sudo apt-key add -
+curl -sS -o /etc/apt/sources.list.d/exynos9810.list https://mirror.bardia.tech/exynos9810/exynos9810.list
 apt update
 
 tmpdir="$(mktemp -d)"
