@@ -55,8 +55,7 @@ DEBIAN_FRONTEND=noninteractive apt install -o Dpkg::Options::="--force-confdef" 
 systemctl disable systemd-resolved systemd-timesyncd upower bluetooth
 systemctl mask systemd-resolved systemd-timesyncd upower bluetooth
 wget https://mirror.bardia.tech/exynos9810/pool/main/2libwlroots7c_0.12.0-1hybrismobian6+git20220410132816.870098d.bookworm.hwc2.fallback_arm64.deb
-wget https://mirror.bardia.tech/exynos9810/pool/main/1lib11-xcb1_1.7.5-arm64.deb
-DEBIAN_FRONTEND=noninteractive apt install --allow-downgrades -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y ./1lib11-xcb1_1.7.5-arm64.deb
+DEBIAN_FRONTEND=noninteractive apt install -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y libx11-xcb1
 DEBIAN_FRONTEND=noninteractive apt install --allow-downgrades -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y ./2libwlroots7c_0.12.0-1hybrismobian6+git20220410132816.870098d.bookworm.hwc2.fallback_arm64.deb
 
 tmpdir="$(mktemp -d)"
