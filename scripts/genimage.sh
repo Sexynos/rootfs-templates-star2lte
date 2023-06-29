@@ -114,9 +114,7 @@ mv ${WORK_DIR}/userdata.img ${WORK_DIR}/target/data/userdata.img
 apt update
 apt install wget -y
 wget https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/star2lte/boot-star2lte.img
-wget https://github.com/Sexynos/droidian-kernel-samsung-exynos9810/releases/download/star2lte/recovery.img
 cp ./boot-star2lte.img ${WORK_DIR}/target/data/boot.img
-cp ./recovery.img ${WORK_DIR}/target/data/recovery.img
 
 # generate zip
 echo "Generating zip"
