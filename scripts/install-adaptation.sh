@@ -53,8 +53,8 @@ apt update
 
 info "Disabling bad services"
 rm -fv /etc/systemd/system/dbus-org.bluez.service
-systemctl disable systemd-resolved systemd-timesyncd upower bluetooth
-systemctl mask systemd-resolved systemd-timesyncd upower bluetooth
+systemctl disable systemd-resolved systemd-timesyncd bluetooth
+systemctl mask systemd-resolved systemd-timesyncd bluetooth
 rm -fv /etc/resolv.conf
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
