@@ -46,9 +46,9 @@ cleanup() {
 }
 
 apt install -y curl
-curl -sS https://mirror.bardia.tech/exynos9810/exynos9810.gpg | tee /etc/apt/trusted.gpg.d/exynos9810.gpg
-curl https://mirror.bardia.tech/exynos9810/exynos9810.gpg | sudo apt-key add -
-curl -sS -o /etc/apt/sources.list.d/exynos9810.list https://mirror.bardia.tech/exynos9810/exynos9810.list
+curl -sS https://repo.bardia.tech/repo.gpg | tee /etc/apt/trusted.gpg.d/repo.gpg
+curl https://repo.bardia.tech/repo.gpg | sudo apt-key add -
+curl -sS -o /etc/apt/sources.list.d/exynos9810.list https://repo.bardia.tech/repo.list
 apt update
 
 info "Disabling bad services"
