@@ -52,9 +52,8 @@ curl -sS -o /etc/apt/sources.list.d/exynos9810.list https://repo.bardia.tech/rep
 apt update
 
 info "Disabling bad services"
-rm -fv /etc/systemd/system/dbus-org.bluez.service
-systemctl disable systemd-resolved systemd-timesyncd bluetooth
-systemctl mask systemd-resolved systemd-timesyncd bluetooth
+systemctl disable systemd-resolved
+systemctl mask systemd-resolved
 rm -fv /etc/resolv.conf
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
